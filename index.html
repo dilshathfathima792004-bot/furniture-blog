@@ -3,35 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timber & Trend | Furniture Design Blog</title>
+    <title>ATELIER | 3D Modern Furniture & Interior Journal</title>
+    
+    <!-- Google Fonts & Model Viewer 3D Script -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Google Model Viewer for Interactive 3D Furniture -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- Header Navigation -->
     <header class="navbar">
-        <div class="logo">Timber & Trend</div>
+        <div class="logo">ATELIER <span>journal</span></div>
         <nav>
             <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Living Room</a></li>
-                <li><a href="#">Bedroom</a></li>
-                <li><a href="#">Restoration</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="#" class="active">3D Showcase</a></li>
+                <li><a href="#editorial">Articles</a></li>
+                <li><a href="#restoration">Craftsmanship</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <span class="tag">Featured Article</span>
-            <h1>10 Timeless Mid-Century Modern Chairs for Compact Living Rooms</h1>
-            <p>Discover how sleek wooden frames and functional design can elevate smaller spaces without sacrificing comfort.</p>
-            <a href="#" class="btn">Read Article</a>
+    <!-- 3D Hero Section -->
+    <section class="hero-3d">
+        <div class="hero-text">
+            <span class="badge">Interactive Design Experience</span>
+            <h1>The Art of Sculptural Seating</h1>
+            <p>Explore form, material, and ergonomics in real-time. Drag and rotate the armchair to view the craftsmanship from every angle.</p>
+            <a href="#editorial" class="btn-primary">Explore Stories &rarr;</a>
+        </div>
+
+        <div class="model-container">
+            <!-- Interactive 3D Model element using Google Model Viewer -->
+            <model-viewer 
+                src="https://modelviewer.dev/shared-assets/models/Chair.glb" 
+                alt="Interactive 3D Furniture Model" 
+                auto-rotate 
+                camera-controls 
+                shadow-intensity="1.5" 
+                exposure="1"
+                interaction-prompt="auto">
+            </model-viewer>
+            <span class="hint">⚡ Click & drag to rotate in 3D space</span>
         </div>
     </section>
 
-    <script src="script.js"></script>
+    <!-- Editorial Blog Grid -->
+    <main class="container" id="editorial">
+        <div class="section-title">
+            <h2>Design Insights</h2>
+            <p>Curated articles on material science, architectural trends, and spatial ergonomics.</p>
+        </div>
+
+        <div class="grid">
+            <article class="card">
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=700&q=80" alt="Velvet Lounge Chair">
+                    <span class="category">Textiles</span>
+                </div>
+                <div class="card-content">
+                    <span class="meta">Oct 2026 • 6 min read</span>
+                    <h3>Tactile Luxury: Why Bouclé & Velvet dominate modern interiors</h3>
+                    <p>An exploration of high-texture fabrics transforming minimalist living spaces.</p>
+                    <a href="article.html" class="read-btn">Read Entry</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&w=700&q=80" alt="Oak Table">
+                    <span class="category">Carpentry</span>
+                </div>
+                <div class="card-content">
+                    <span class="meta">Sep 2026 • 8 min read</span>
+                    <h3>The Enduring Charm of Japanese Joinery Techniques</h3>
+                    <p>How joint assembly without nails or screws creates timeless wood furniture.</p>
+                    <a href="article.html" class="read-btn">Read Entry</a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 ATELIER Design Journal. Built with HTML, CSS & 3D WebGL.</p>
+    </footer>
+
 </body>
 </html>
